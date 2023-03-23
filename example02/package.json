@@ -1,0 +1,19 @@
+{
+  "name": "example02",
+  "version": "0.0.1",
+  "description": "hands on example02",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "t.kishida",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
+    "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.8.0",
+    "prettier": "^2.8.6",
+    "typescript": "^5.0.2"
+  }
+}
