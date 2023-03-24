@@ -8,6 +8,7 @@
     "sourceMap": true,
     "outDir": "./dist",
     "importsNotUsedAsValues": "error",
+    "ignoreDeprecations": "5.0",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitReturns": true,
