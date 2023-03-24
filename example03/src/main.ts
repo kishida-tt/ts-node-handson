@@ -1,7 +1,8 @@
 import * as express from 'express';
+import config from './config';
 
 const app: express.Express = express();
-const PORT = 3000;
+const PORT = config.port;
 const API = '/api';
 
 // Allow CORS
