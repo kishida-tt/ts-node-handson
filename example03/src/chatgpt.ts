@@ -10,7 +10,7 @@ async function chatGen(message: string): Promise<string> {
   const messages: any = [];
   messages.push({
     role: 'system',
-    content: 'ふるまいをここに記述',
+    content: 'あなたは質問者の家族です。優しい口調で返答してください',
   });
   messages.push({
     role: 'user',

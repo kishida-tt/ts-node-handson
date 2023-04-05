@@ -1,4 +1,6 @@
 import * as express from 'express';
+import fetchAPI from './fetchAPI';
+import chatGen from './chatgpt';
 import config from './config';
 
 const app: express.Express = express();
@@ -21,9 +23,27 @@ app.use(express.urlencoded({ extended: true }));
 
 // routing
 const router: express.Router = express.Router();
-router.get(`${API}/example`, (req: express.Request, res: express.Response) => {
-  res.send(req.query);
-});
+
+// sample: fetch api with axios
+router.get(
+  `${API}/example`,
+  async (req: express.Request, res: express.Response) => {
+    const ret = await fetchAPI('');
+    res.send(ret);
+  },
+);
+
+// sample: use openai chatgpt
+router.get(
+  `${API}/chat`,
+  async (req: express.Request, res: express.Response) => {
+    const msg = req.query['msg']?.toString() || '';
+    const ret = await chatGen(msg);
+    res.send(ret);
+  },
+);
+
+// sample post
 router.post(`${API}/example`, (req: express.Request, res: express.Response) => {
   res.send(req.body);
 });
